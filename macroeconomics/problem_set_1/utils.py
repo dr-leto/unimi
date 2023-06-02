@@ -21,7 +21,7 @@ features_to_names = {
     "HOABS": "all_bus_hours",
     "HOAMS": "all_manuf_hours",
     "HOANBS": "all_nonfarm_hours",
-    "AWHMAN": "avg_manuf_hours",
+    "AWHMAN": "avg_hours", # Actually is it avg_manuf_hour, but who cares...
     "AWHNONAG": "avg_private_hours",
     "AHETPIx": "average_hourly_earnings",
     "CE16OV": "employment",
@@ -34,6 +34,12 @@ def mult_diff_logs(x):
     return np.log(x).diff(periods=1) * 1200
 
 
+def no_trend_logs(x):
+    log_x = np.log(1 + x)
+    cycle, trend = hpfilter(log_x)
+    return log_x - trend
+
+
 def log(x):
     return np.log(x)
 
@@ -43,22 +49,20 @@ def id_trans(x):
 
 
 feat_to_transform = {
-    "RPI": mult_diff_logs,
-    "DPCERA3M086SBEA": mult_diff_logs,
-    "INDPRO": mult_diff_logs,
-    "CUMFNS": id_trans,
-    "UNRATE": id_trans,
-    "PAYEMS": mult_diff_logs,
-    "CES0600000007": id_trans,
-    "CES0600000008": mult_diff_logs,
-    "WPSFD49207": mult_diff_logs,
-    "PCEPI": mult_diff_logs,
-    "HOUST": log,
-    "S&P 500": mult_diff_logs,
-    "EXUSUKx": mult_diff_logs,
-    "GS5": id_trans,
-    "GS10": id_trans,
-    "BAAFFM": id_trans
+    "gdp": no_trend_logs,
+    "gdp_cap": no_trend_logs,
+    "employment": no_trend_logs,
+    "productivity": no_trend_logs,
+    "non_durable_consumption": no_trend_logs,
+    "durable_consumption": no_trend_logs,
+    "consumption": no_trend_logs,
+    "consumption_cap": no_trend_logs,
+    "investment": no_trend_logs,
+    "investment_cap": no_trend_logs,
+    "all_hours": no_trend_logs,
+    "avg_hours": no_trend_logs,
+    "average_hourly_earnings": no_trend_logs,
+    "interest_rate": id_trans
 }
 
 
