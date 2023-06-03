@@ -5,3 +5,4 @@ Repository for university projects and labs in [DSE](https://www.unimi.it/en/edu
 - :bar_chart: [Statistical Theory and Mathematics](./statistical_theory) `#Jupyter Notebook` `#PowerPoint`
 - :broccoli: [Nutritional Epidemiology](./nutritional_epidemiology) `#Jupyter Notebook` `#PowerPoint`
 - :brain: [Bayesian Analysis](./bayesian_analysis) `#Jupyter Notebook` `#Python` `#R`
+- :dollar: [Dynamic Economic Modeling](./macroeconomics) `#Jupyter Notebook`
