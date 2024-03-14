@@ -21,16 +21,18 @@ sns.color_palette("muted", 10)
 from sklearn.base import TransformerMixin
 from sklearn.impute import SimpleImputer, KNNImputer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder, PolynomialFeatures, OrdinalEncoder
-from sklearn.decomposition import PCA
+from sklearn.decomposition import PCA, KernelPCA
 
 # Metrics
 from sklearn.metrics import make_scorer
 from sklearn.metrics import f1_score, roc_auc_score, confusion_matrix, classification_report, RocCurveDisplay
-from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error, r2_score
+from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error, r2_score, silhouette_score
 
 # Models
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.cluster import DBSCAN, AgglomerativeClustering
+from sklearn.model_selection import GridSearchCV
 
 # Warnings
 import warnings
