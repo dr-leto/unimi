@@ -7,3 +7,4 @@ Repository for university projects and labs in [DSE](https://www.unimi.it/en/edu
 - :brain: [Bayesian Analysis](./bayesian_analysis) `#Jupyter Notebook` `#Python` `#R`
 - :dollar: [Dynamic Economic Modeling](./macroeconomics) `#Jupyter Notebook`
 - :robot: [Machine Learning and Statistical Learning](./ml_stat) `#Python` `#Jupyter Notebook` `#R`
+- :performing_arts: [Advanced Multivariate Statistics](./advanced_multivariate_statistics) `#Python` `#Jupyter Notebook`
