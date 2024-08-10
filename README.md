@@ -8,4 +8,5 @@ Repository for university projects and labs in [DSE](https://www.unimi.it/en/edu
 - :dollar: [Dynamic Economic Modeling](./macroeconomics) `#Jupyter Notebook`
 - :robot: [Machine Learning and Statistical Learning](./ml_stat) `#Python` `#Jupyter Notebook` `#R`
 - :performing_arts: [Advanced Multivariate Statistics](./advanced_multivariate_statistics) `#Python` `#Jupyter Notebook`
-- :weight_lifting_man: [Algorithms for Massive Data](./algorithms_for_massive_data) `Pyspark` `Databricks`
+- :weight_lifting_man: [Algorithms for Massive Data](./algorithms_for_massive_data) `#Pyspark` `#Databricks`
+- :book: [Text Mining](./text_mining) `#Jupyter Notebook` `#Python` `#SpaCy` `#NLP`
